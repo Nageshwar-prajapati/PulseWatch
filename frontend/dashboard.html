@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseWatch - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    
+    
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="heartbeat-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span>PulseWatch</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="history.html">History</a>
+            <div class="pw-profile">
+                <a href="login.html" class="profile-link" id="profileLink"><i class="fa-regular fa-circle-user"></i> Profile <i class="fa-solid fa-caret-down pw-caret"></i></a>
+            </div>
+        </nav>
+
+        <div class="nav-right">
+            <i class="fa-regular fa-bell notification"></i>
+        </div>
+
+    </header>
+
+    <div class="desktop">
+        <div class="leftbox">
+            
+            <main class="main-content">
+                <div class="url">
+                    <h1>ADD URL</h1>
+                    <div class="box1">
+                        <label for="url"></label>
+                        <input type="url" id="url" placeholder="Enter URL e.g. https://example.com">
+                        <button class="A" id="addUrlBtn">Add URL</button>
+                    </div>
+                </div>
+            </main>
+            
+            <div class="monitor">
+                <div class="box">
+                    <div>
+                        <img src="total.png" 
+                        class="img-content">
+                    </div>
+                    <div class="total">
+                        <h3>Total URLs</h3>
+                        <p id="totalUrls">0</p>
+                        <span class="foot">Monitored URLs</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="online.png" 
+                        class="img-content">
+                    </div>
+                    <div class="online1">
+                        <h3>Online</h3>
+                        <p id="onlineUrls">0</p>
+                        <span class="foot">URLs are up</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="offline.png" 
+                        class="img-content">
+                    </div>
+                    <div class="offline1">
+                        <h3>Offline</h3>
+                        <p id="offlineUrls">0</p>
+                        <span class="foot">URLs are Down</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="last.png" 
+                        class="img-content">
+                    </div>
+                    <div class="last-check">
+                        <h3>Last Check</h3>
+                        <p id="lastCheck">--</p>
+                        <span class="foot">Every 60s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history">
+                <h2 class="title">MONITORED URLs <button class="recheck-all" id="recheckAllBtn" title="Recheck all URLs"><i class="fa-solid fa-rotate"></i> Recheck All</button></h2>
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>URL</th>
+                            <th>Status</th>
+                            <th>Response Time</th>
+                            <th>Last Checked</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="urlTableBody">
+                        <tr><td colspan="5">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="rightbox">
+            <div class="container-2">
+                <h2 class="title-2">System Overview</h2>
+                <div class="chart-container">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+
+            <div class="container-3">
+                <span class="bell"><i class="fa-solid fa-bell"></i> Recent Alert</span>
+                <div id="recentAlert">No recent alerts</div>
+            </div>
+
+            <div class="container-4">
+                <div class="note-head">
+                    <span>Notification</span>
+                    <button type="button" class="clear-notes" id="clearNotesBtn" hidden><i class="fa-solid fa-trash-can"></i> Clear all</button>
+                </div>
+                <div id="notificationList">No notifications</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

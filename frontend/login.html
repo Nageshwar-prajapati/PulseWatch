@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseWatch - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="heartbeat-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span>PulseWatch</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="history.html">History</a>
+            <div class="pw-profile">
+                <a href="login.html" class="profile-link active" id="profileLink"><i class="fa-regular fa-circle-user"></i> Profile <i class="fa-solid fa-caret-down pw-caret"></i></a>
+            </div>
+        </nav>
+
+        <div class="nav-right">
+            <i class="fa-regular fa-bell notification"></i>
+        </div>
+    </header>
+
+    <main class="login-section">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>PulseWatch</span>
+            </div>
+
+            <h2 class="form-title" id="formTitle">Welcome back</h2>
+            <p class="form-message" id="formMessage"></p>
+
+            <form id="authForm" novalidate>
+
+                <div class="input-group">
+                    <label id="userLabel">Email / Username</label>
+
+                    <div class="input-box">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="username" placeholder="Enter your email or username" autocomplete="username" required>
+                    </div>
+                </div>
+
+                <div class="input-group" id="emailGroup" hidden>
+                    <label>Email</label>
+
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email (optional)" autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <i class="fa-regular fa-eye password-eye"></i>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" id="forgotLink">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-button" id="submitBtn">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+
+            <div class="signup">
+                <span id="switchText">Don't have an account?</span>
+                <a href="#" id="switchLink">Sign Up</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="common.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

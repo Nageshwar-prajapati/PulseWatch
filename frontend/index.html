@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseWatch - Website Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="heartbeat-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <span>PulseWatch</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="history.html">History</a>
+            <div class="pw-profile">
+                <a href="login.html" class="profile-link" id="profileLink"><i class="fa-regular fa-circle-user"></i> Profile <i class="fa-solid fa-caret-down pw-caret"></i></a>
+            </div>
+        </nav>
+
+        <div class="nav-right">
+            <i class="fa-regular fa-bell notification"></i>
+        </div>
+
+    </header>
+
+
+    <!-- Main Section -->
+    <main class="hero">
+
+        <!-- Check Website Form -->
+        <section class="check-container">
+
+            <h1>Check Your Site</h1>
+
+            <p>
+                Enter a website URL to monitor its status
+                and get instant results.
+            </p>
+
+            <div class="input-container">
+
+                <i class="fa-solid fa-link"></i>
+
+                <input
+                    type="url"
+                    placeholder="Enter a site URL (e.g. https://example.com)"
+                >
+
+            </div>
+
+            <button class="checkButton">
+                Check
+            </button>
+
+        </section>
+
+    </main>
+
+    <div id="result" class="result"></div>
+
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

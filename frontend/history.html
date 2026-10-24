@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseWatch - History</title>
+    <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="heartbeat-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <span>PulseWatch</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" >Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="history.html" class="active">History</a>
+            <div class="pw-profile">
+                <a href="login.html" class="profile-link" id="profileLink"><i class="fa-regular fa-circle-user"></i> Profile <i class="fa-solid fa-caret-down pw-caret"></i></a>
+            </div>
+        </nav>
+
+        <div class="nav-right">
+            <i class="fa-regular fa-bell notification"></i>
+        </div>
+
+    </header>
+
+    <main class="history-page">
+        <div class="history-card">
+            <div class="history-header">
+                <h2><i class="fa-solid fa-clock-rotate-left"></i> Check History</h2>
+                <div class="filters">
+                    <select id="monitorFilter"><option value="">All URLs</option></select>
+                    <select id="statusFilter">
+                        <option value="">All statuses</option>
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
+                    </select>
+                    <button id="refreshBtn"><i class="fa-solid fa-rotate"></i> Refresh</button>
+                </div>
+            </div>
+            <div class="summary" id="summary"></div>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Status</th>
+                        <th>HTTP Code</th>
+                        <th>Response Time</th>
+                        <th>Details</th>
+                        <th>Checked At</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <tr><td colspan="6">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="history.js"></script>
+</body>
+</html>
